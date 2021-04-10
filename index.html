@@ -18,7 +18,7 @@ function daysToMilliseconds(days) {
 }
 
 function drawChart() {
-  var queryString = encodeURIComponent('SELECT A, B, D, E, F, G, H,I');
+  var queryString = encodeURIComponent('SELECT A, B, C, D, E, F, G, H');
 
   var query = new google.visualization.Query(
     'https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/gviz/tq?gid=0&headers=1&tq=' + queryString);
