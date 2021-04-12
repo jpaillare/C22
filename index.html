@@ -7,7 +7,7 @@
 <body>
 <h1>Prototype de Gantt</h1>
 <p>Data : https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/edit#gid=0 
-<br><i>dernière mise à jour : 12/04/2021 à 17h41</i>
+<br><i>dernière mise à jour : 12/04/2021 à 17h45</i>
 </p>
     <div id="chart_div" style="width: 100%; height: 1500px; font-family: serif !important;"></div>
 <script>
@@ -37,11 +37,10 @@ function handleQueryResponse(response) {
   var data = response.getDataTable();
   
   var options = {
-	       width : 3000,
-	 	 	 hAxis: {
+	 	 	 /*hAxis: {
 	             format: 'dd/M/yy',
 	             gridlines: {count: 20}
-	           },
+	           },*/
 		  	gantt: {
 	            /*defaultStartDateMillis: new Date(2021, 3, 01)*/
             criticalPathEnabled: true,
