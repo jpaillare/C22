@@ -36,6 +36,8 @@ function handleQueryResponse(response) {
   var options = {
           height: 2000,
 	       width : 3000,
+		  		gantt: {
+	            defaultStartDateMillis: new Date(2021, 3, 01)},
         };
   
   var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
