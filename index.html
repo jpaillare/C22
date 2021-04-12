@@ -32,6 +32,11 @@ function handleQueryResponse(response) {
   }
 
   var data = response.getDataTable();
+  
+  var options = {
+          height: 1000,
+        };
+  
   var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
   chart.draw(data);
 }
