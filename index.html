@@ -43,7 +43,14 @@ function handleQueryResponse(response) {
 	             gridlines: {count: 20}
 	           },
 		  	gantt: {
-	            defaultStartDateMillis: new Date(2021, 3, 01)},
+	            /*defaultStartDateMillis: new Date(2021, 3, 01)*/
+            criticalPathEnabled: true,
+            criticalPathStyle: {
+              stroke: '#e64a19',
+              strokeWidth: 5
+            }
+			},
+				          
         };
   
   var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
