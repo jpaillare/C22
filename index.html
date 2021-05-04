@@ -42,15 +42,20 @@ function handleQueryResponse(response) {
   var data = response.getDataTable();
 
   var options = {
- 		  	gantt: {
-             sortTasks: false, 
+	  labelStyle: {
+	    fontName: Roboto2,
+	    fontSize: 14,
+	    color: '#757575'
+	  },
+ 		  	/*gantt: {
+            sortTasks: false, 
  				labelMaxWidth: 1000,
  				criticalPathEnabled: true,
              criticalPathStyle: {
                stroke: '#e64a19',
                strokeWidth: 5
              }
- 			}	          
+ 			}*/	          
          };
   
   var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
