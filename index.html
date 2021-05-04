@@ -43,15 +43,15 @@ function handleQueryResponse(response) {
   var data = response.getDataTable();
 
   var options = {
- 		  	gantt: {
-            sortTasks: false, 
- 				labelMaxWidth: 1000,
+ 		gantt: {
+          sortTasks: false 
+ 				/*labelMaxWidth: 1000,
  				criticalPathEnabled: true,
             criticalPathStyle: {
             stroke: '#e64a19',
             strokeWidth: 5
-             }
- 			 }	          
+             }*/
+ 			}	          
        };
   
   var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
@@ -60,6 +60,6 @@ function handleQueryResponse(response) {
     </script>
 <p>Data : https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/edit#gid=0 
 </p>
-<p><i>Dernière mise à jour : 04/05/2021 à 09h56</i></p>
+<p><i>Dernière mise à jour : 04/05/2021 à 15h28</i></p>
 </body>
 </html>
