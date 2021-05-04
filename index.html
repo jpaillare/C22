@@ -41,22 +41,15 @@ function handleQueryResponse(response) {
 
 
  var options = {
-	 	 	 /*hAxis: {
-	             format: 'dd/M/yy',
-	             gridlines: {count: 20}
-	           },*/
 		  	gantt: {
-	            /*defaultStartDateMillis: new Date(2021, 3, 01)*/
-            sortTasks:false, 
+            sortTasks: false, 
 				labelMaxWidth: 1000,
-				sortTasks: false,
 				criticalPathEnabled: true,
             criticalPathStyle: {
               stroke: '#e64a19',
               strokeWidth: 5
             }
-			},
-				          
+			}	          
         };
   
     var data = response.getDataTable();
@@ -67,6 +60,6 @@ function handleQueryResponse(response) {
     </script>
 <p>Data : https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/edit#gid=0 
 </p>
-<p><i>Dernière mise à jour : 04/05/2021 à 09h30</i></p>
+<p><i>Dernière mise à jour : 04/05/2021 à 09h35</i></p>
 </body>
 </html>
