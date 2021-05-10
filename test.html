@@ -44,7 +44,8 @@ function handleQueryResponse(response) {
   var data = response.getDataTable();
 
   var options = {
- 		gantt: {
+ 	colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],	
+	  gantt: {
            sortTasks:false, 
  			  labelMaxWidth: 1000,
            criticalPathEnabled: true,
