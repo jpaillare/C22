@@ -31,7 +31,7 @@ function drawChart() {
   var queryString = encodeURIComponent('SELECT A, B, C, D, E, F, G, H');
 
   var query = new google.visualization.Query(
-    'https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/gviz/tq?sheet=data-test&headers=1&tq= + queryString);
+    'https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/gviz/tq?sheet=datatest&headers=1&tq= + queryString);
   query.send(handleQueryResponse);
 }
 
