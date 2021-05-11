@@ -60,49 +60,6 @@ function handleQueryResponse(response) {
   chart.draw(data,options);
 }
     </script>
-	<script>
-    google.charts.load('current', {
-  'packages': ['gantt']
-});
-google.charts.setOnLoadCallback(drawChart);
-
-function daysToMilliseconds(days) {
-  return days * 24 * 60 * 60 * 1000;
-}
-
-function drawChart() {
-  var queryString = encodeURIComponent('SELECT A, B, C, D, E, F, G, H');
-
-  var query = new google.visualization.Query(
-    'https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/gviz/tq?gid=1863350710&headers=1&tq=' + queryString);
-  query.send(handleQueryResponse);
-}
-
-function handleQueryResponse(response) {
-  if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-    return;
-  }
- 
-  var data = response.getDataTable();
-
-  var options = {
- 	colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],	
-	  gantt: {
-           sortTasks:false, 
- 			  labelMaxWidth: 1000,
-           criticalPathEnabled: true,
-            criticalPathStyle: {
-              stroke: '#e64a19',
-              strokeWidth: 5
-            }
- 			}	          
-       };
-  
-  var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-  chart.draw(data,options);
-}
-    </script>
 	
 <p><a href="https://docs.google.com/spreadsheets/d/1I64MyCq0iy1ZJKHh8AFQt45Y_7Xk3_0CgXBtObjdLVQ/edit#gid=0" target="_blank">Données sources</a>
 </p>
