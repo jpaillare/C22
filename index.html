@@ -3,6 +3,7 @@
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	  <title>Planning DRIS Campus 2022 - Prototype</title>
 	  <style>
 	  		  h1{
@@ -17,14 +18,29 @@
 	     			line-height: 1.5;
 	    			color: #333333; 
 	  		}
+			#vline{
+			  position: fixed;
+			  height: 100%;
+			  width: 0px;
+			  border: 1px solid red;
+			  top: 0;
+			  left: 0;
+			  z-index: 1000000
+			}
 	  	 </style>
   </head>
 <body>
 <h1>Planning des bibliothèques CAMPUS 2022 - PROTOTYPE</h1>
 <p>Ce planning est produit à partir d'un <a href="https://docs.google.com/spreadsheets/d/1avsgArBLhnTQ92al6pyo77___YbD3_4ySpiPUbFAIH8/edit#gid=0" target="_blank"> inventaire des tâches et des intervenants </a> effectué auprès des responsables des GT Campus 2022.</p>
+<div id="vline"></div>
 
     <div id="chart_div" style="width: 100%; height: 2000px; font-family: serif !important;"></div>
 <script>
+	var vline=$('#vline');
+	setInterval(function(){
+	  vline.css('left', parseInt(vline.css('left')) + 1);
+	}, 50);
+	
     google.charts.load('current', {
   'packages': ['gantt']
 });
